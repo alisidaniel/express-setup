@@ -4,7 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "watch": "tsc -w",
+    "start": "node dist/server.js",
+    "dev": "nodemon src/server.ts",
+    "test": "jest",
+    "build": "rm -rf dist/ && prettier --write src/ && tsc",
+    "prettier": "prettier --write src/"
   },
   "repository": {
     "type": "git",
